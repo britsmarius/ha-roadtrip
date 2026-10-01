@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Road Trip",
+        "description": "Creates a private webhook your iPhone Shortcut sends Road Trip backups to.",
+        "data": {
+          "allow_remote": "Accept uploads from outside my home network"
+        },
+        "data_description": {
+          "allow_remote": "Leave off if the Shortcut only runs at home (on Wi-Fi). Turn on to upload from anywhere via your external / Nabu Casa URL."
+        }
+      }
+    },
+    "create_entry": {
+      "default": "Done. Point the iPhone Shortcut at this address (keep it private, it works like a password):\n\n**At home:** `{internal_url}`\n\n**From anywhere:** `{external_url}`\n\nYou can see this again under the integration's Configure button."
+    },
+    "abort": {
+      "single_instance_allowed": "Road Trip is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Road Trip upload address",
+        "description": "Shortcut URL (keep private):\n\n**At home:** `{internal_url}`\n\n**From anywhere:** `{external_url}`",
+        "data": {
+          "allow_remote": "Accept uploads from outside my home network"
+        }
+      }
+    }
+  },
+  "services": {
+    "import_file": {
+      "name": "Import file",
+      "description": "Import a Road Trip backup (.zip) or .roadtrip file from disk.",
+      "fields": {
+        "path": {
+          "name": "Path",
+          "description": "Full path to the file. Leave empty to use the newest file in /config/roadtrip/inbox."
+        }
+      }
+    }
+  }
+}

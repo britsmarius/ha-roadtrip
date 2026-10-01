@@ -1,0 +1,7 @@
+import_file:
+  fields:
+    path:
+      required: false
+      example: /config/roadtrip/inbox/Road_Trip_Backup.zip
+      selector:
+        text:
